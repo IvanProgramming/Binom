@@ -1,0 +1,1 @@
+## Simple binnary formules generator
