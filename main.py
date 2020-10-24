@@ -5,6 +5,13 @@ def faktorial(n):
         res *= i
     return res
 
+def faktorial_quotient(n, k):
+    """ Returns faktorial(n)/faktorial(n - k) """
+    res = 1
+    for i in range(n - k + 1, n + 1):
+        res *= i
+    return res
+
 def get_multiplier_view(variable, pow):
     """ Return view of multiplier. Used in for cycle, __main__ function """
     multiplier = ""
@@ -16,7 +23,7 @@ def get_multiplier_view(variable, pow):
 
 def get_combination_count(quanity, _from):
     """ Returns count of combination. Used for count coefficients """
-    return int(faktorial(_from) / (faktorial(quanity) * (faktorial(_from - quanity))))    
+    return int(faktorial_quotient(_from, quanity) / (faktorial(quanity)))    
 
 def get_formule(n):
     """ Returns a formule string """
