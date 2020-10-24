@@ -23,7 +23,7 @@ def get_multiplier_view(variable, pow):
 
 def get_combination_count(quanity, _from):
     """ Returns count of combination. Used for count coefficients """
-    return int(faktorial_quotient(_from, quanity) / (faktorial(quanity)))    
+    return faktorial_quotient(_from, quanity) // (faktorial(quanity))
 
 def get_formule(n):
     """ Returns a formule string """
